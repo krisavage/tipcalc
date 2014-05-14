@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Tipcalc" >
+
+    <TextView
+        android:id="@+id/Billtextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/Bill_text_view" />
+
+    <EditText
+        android:id="@+id/Billedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Billtextview"
+        android:layout_alignBottom="@+id/Billtextview"
+        android:layout_toRightOf="@+id/Billtextview"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/Bill_edit_text" />
+
+    <TextView
+        android:id="@+id/Tiptextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Billtextview"
+        android:layout_below="@+id/Billedittext"
+        android:layout_marginTop="28dp"
+        android:text="@string/Tip_text_view" />
+
+    <EditText
+        android:id="@+id/Tipedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Tiptextview"
+        android:layout_alignBottom="@+id/Tiptextview"
+        android:layout_alignLeft="@+id/Billedittext"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        android:text="@string/Tip_edit_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/totaltextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Tiptextview"
+        android:layout_centerVertical="true"
+        android:text="@string/total_text_view" />
+
+    <EditText
+        android:id="@+id/totaledittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/totaltextview"
+        android:layout_toRightOf="@+id/totaltextview"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/total_edit_text" />
+
+    <SeekBar
+        android:id="@+id/seekbaredittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekbartextview"
+        android:layout_alignRight="@+id/totaledittext"
+        android:layout_below="@+id/seekbartextview"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:id="@+id/seekbartextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Tiptextview"
+        android:layout_below="@+id/Tipedittext"
+        android:layout_marginTop="34dp"
+        android:text="@string/Tip_text_view"
+        android:progress="15" />
+
+</RelativeLayout>
